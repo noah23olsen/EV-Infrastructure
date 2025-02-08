@@ -4,17 +4,6 @@ import pandas as pd
 # Load your dataset
 data = pd.read_csv("ev_charging_stations.csv")
 
-# Check if the dataset has latitude and longitude columns
-print(data.head())  # Ensure you see the latitude and longitude columns
-
-# Handle rows with missing latitude or longitude
-# Get the first 100 rows with missing latitude or longitude
-# nan_rows = data[data['latitude'].isna() | data['longitude'].isna()].head(100)
-# print(f"First 100 rows with NaN values:\n{nan_rows}")
-
-# # Drop these rows for now (avoiding plotting invalid data)
-# data = data.drop(nan_rows.index)
-
 # Optional: Ensure no NaN values remain in latitude and longitude
 data = data.dropna(subset=['latitude', 'longitude'])
 
