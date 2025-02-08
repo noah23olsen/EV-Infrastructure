@@ -15,7 +15,6 @@ for _, row in data.iterrows():
     try:
         # if the ev_dc_fast_num column is greater than 0 and not empty, continue, otherwise, stop
 
-        if 
         # Add a circle marker for each charging station
         folium.CircleMarker(
             location=[row["latitude"], row["longitude"]],
