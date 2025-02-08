@@ -13,6 +13,9 @@ us_map = folium.Map(location=[39.8283, -98.5795], zoom_start=5)
 # Add points for the remaining data
 for _, row in data.iterrows():
     try:
+        # if the ev_dc_fast_num column is greater than 0 and not empty, continue, otherwise, stop
+
+        if 
         # Add a circle marker for each charging station
         folium.CircleMarker(
             location=[row["latitude"], row["longitude"]],
